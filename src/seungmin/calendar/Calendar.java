@@ -20,16 +20,16 @@ public class Calendar {
 		Scanner sc = new Scanner(System.in);
 		Calendar cal = new Calendar();
 		
-		System.out.println("반복횟수를 입력하세요");
-		int repeat = sc.nextInt();
-		for(int i=0;i<repeat;i++) {
+		while(true) {
 		System.out.println("달을 입력해주십시요.");
 		int a = sc.nextInt();
+		if(a < 1) break;
+		if(a>12) continue;
 		int m = cal.getMaxDaysOfMonth(a);
 		System.out.println(a+"월은 "  + m + "일까지 있습니다.");
 //		System.out.printf("%d월은 %d일까지 있습니다.",a,m);
 		}
-//		cal.printSampleCalender();
+		System.out.println("Bye!");
 		sc.close();
 
 	}
